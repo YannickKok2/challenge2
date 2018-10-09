@@ -1,0 +1,597 @@
+
+body{
+  display: grid;
+  grid-template-columns: 1fr;
+
+
+  color: #000;
+  background-color: white;
+
+  grid-template-areas: 
+  "title3"
+        "title2"
+        "title"
+        "menu"
+        "main"
+        "main2"
+        "main3"
+        "main4"
+        "main5"
+        "main6"
+        "main7" 
+        "main8" 
+        "foot"
+}
+
+p {
+  font-size: 16px;
+}
+
+.menubuttons {
+  grid-area: buttons;
+  display:none;
+}
+
+.header {
+  grid-area: title;
+  width: 300px;
+}
+
+.header2{
+  grid-area: title2;
+  width: 300px;
+} 
+
+
+
+.header2 img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.header3 {
+  grid-area:title3;
+  width: 300px;
+}
+
+.header4 {
+  grid-area:title4;
+  width:600px;
+  margin-left: 25px;
+  margin-right: 25px;
+  display:none;
+}
+
+.header5 {
+  grid-area: header5;
+  display:none;
+
+}
+
+.header6 {
+  grid-area: header6;
+  display: none;
+}
+
+.menutoggle img {
+  width: 25px;
+  margin-left: 180px;
+}
+
+.main{
+  grid-area: main;
+  width: 300px;
+  padding: 7px;
+  border: solid black 1px;
+  margin-bottom: 10px;
+  background-color: #FBFAF5;
+  font-size: 16px;
+}
+
+.main2{
+  grid-area: main2;
+  width: 300px;
+  
+  border: solid black 1px;
+  margin-bottom: 10px;
+  background-color: #FEEAAB;
+}
+
+
+
+.main3{
+  grid-area: main3;
+  width: 300px;
+
+  background-color: #FBFAF5;
+  border: solid black 1px;
+
+  margin-bottom: 10px;
+}
+
+.main4{
+  grid-area: main4;
+  width: 300px;
+
+  padding: 7px;
+  background-color: #FEEAAB;
+  border: solid black 1px;
+  margin-bottom: 10px;
+}
+
+.main5{
+  grid-area: main5;
+  width: 300px;
+  padding: 7px;
+  background-color: #FBFAF5;
+  border: solid black 1px;
+  margin-bottom: 10px;
+}
+
+.main6{
+  grid-area: main6;
+  width: 300px;
+  padding: 7px;
+  background-color: #FEEAAB;
+  border: solid black 1px;
+  margin-bottom: 10px;
+}
+
+.main7{
+  grid-area: main7;
+  width: 300px;
+  background-color: #FBFAF5;
+  border: solid black 1px;
+  overflow: auto;
+  margin-bottom: 10px;
+}
+
+.main7 img {
+  width:298px;
+}
+
+.main8{
+  grid-area: main8;
+  width: 300px;
+  padding: 7px;
+  background-color: #FBFAF5;
+  border: solid black 1px;
+  margin-bottom: 10px;
+  overflow: auto;
+}
+
+.main8 img {
+  width: 50px;
+}
+
+#menu {
+  grid-area: menu;
+  width: 300px;
+}
+
+.ad1 {
+  grid-area: ad1;
+}
+.ad2 {
+  grid-area: ad2;
+}
+
+.foot {
+  grid-area: foot;
+}
+
+
+/*
+  Nav styles
+*/
+
+nav {
+  padding: 0;
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  /* flex-flow: row wrap; */
+  flex-flow: column;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  flex-grow: 1;
+  display: flex;
+  padding: 1em;
+  margin: 0.4em;
+  list-style: none;
+  justify-content: center;
+  border-radius: 0.4em;
+  border: 1px solid black;
+  /*background-color: rgba(255, 255, 255, 0.2);*/
+}
+
+nav ul li:hover {
+  background-color: rgba(50, 50, 50, 0.5);
+}
+
+nav > ul > li > a {
+  color: #000;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.menutoggle {
+  margin-left: auto;
+}
+
+.menutoggle a{
+  font-size: 2em;
+  color: #000;
+  text-decoration: none;
+}
+
+.active {
+  max-height: 400px;
+  transition: max-height 2s;
+
+}
+
+.inactive {
+  max-height: 0px;
+  transition: max-height 2s;
+}
+
+
+
+
+
+@media only screen and (min-width: 650px){
+  body{
+    display: grid;
+    grid-template-columns: fit-content(300px) fit-content(300px) fit-content(300px);
+    grid-gap: 10px;
+    grid-template-areas: 
+          "title4 title4 "
+          "header5  header6"
+          "title buttons"
+          "main  main5  "
+          "main2 main6 "
+          "main3 main7 "
+          "main4 main8 "
+
+  }
+
+  header {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+  }
+  nav ul li {
+    padding: 0.5em;
+    border: none;
+  }
+
+  nav ul {
+    flex-flow: row;
+  }
+
+  .menutoggle {
+    display: none;
+  }
+
+#menu {
+  display: none;
+}
+
+
+
+.header2 {
+  display: none;
+}
+
+.header3 {
+  display: none;
+}
+
+.header4 {
+  display: inline;
+}
+
+.header5 {
+  display: inline;
+}
+
+.header6 {
+  display: inline;
+}
+
+.menubuttons {
+  display: block;
+  grid-area: buttons;
+}
+
+  .active, .inactive {
+    max-height: unset;
+  }
+
+  .header{
+    grid-area: title;
+    width: 33%;
+  } 
+  
+  .main{
+    grid-area: main;
+
+  }
+  
+  .main2{
+    grid-area: main2;
+
+  }
+  
+  .main3{
+    grid-area: main3;
+  }
+
+  .main4{
+    grid-area: main4;
+  }
+  
+  .main5{
+    grid-area: main5;
+  }
+  .main6{
+    grid-area: main6;
+  }
+  .main7{
+    grid-area: main7;
+  }
+  .main8{
+    grid-area: main8;
+  }
+  
+
+  }
+
+  @media only screen and (min-width: 1000px){
+    body{
+      display: grid;
+      grid-template-columns: fit-content(300px) fit-content(300px)fit-content(300px) fit-content(300px);
+      grid-template-rows: fit-content(300px) fit-content(300px) fit-content(300px) fit-content(300px) ;
+      grid-gap: 10px;
+      grid-template-areas: 
+            "title4 title4 title4   header5  "
+            "title4  title4 title4 header6"
+            "title4 title4 title4 title"
+            "title4  title4 title4 buttons"
+            "main main main5 main5  "
+            "main2 main2 main6 main6 "
+            "main3 main3 main7 main7 "
+            "main4 main4 main8 main8 "
+  
+    }
+    nav ul li {
+      padding: 0.5em;
+      border: none;
+    }
+  
+    nav ul {
+      flex-flow: row;
+    }
+  
+    .menutoggle {
+      display: none;
+    }
+  
+  #menu {
+    display: none;
+  }
+
+  .header3 {
+    display:none;
+  }
+
+  .header2 {
+    display: none;
+  }
+  
+  .header4 {
+    display: inline;
+  }
+  
+  .header5 {
+    display: inline;
+  }
+  
+  .header6 {
+    display: inline;
+  }
+  
+  .menubuttons {
+    display: block;
+    grid-area: buttons;
+  }
+  
+    .active, .inactive {
+      max-height: unset;
+    }
+  
+    .header{
+      grid-area: title;
+      width: 33%;
+    } 
+    
+    .main{
+      grid-area: main;
+      width: 465px;
+  
+    }
+    
+    .main2{
+      grid-area: main2;
+      width: 465px;
+  
+    }
+    
+    .main3{
+      grid-area: main3;
+      width: 465px;
+    }
+  
+    .main4{
+      grid-area: main4;
+      width: 465px;
+    }
+    
+    .main5{
+      grid-area: main5;
+      width: 465px;
+    }
+    .main6{
+      grid-area: main6;
+      width: 465px;
+    }
+    .main7{
+      grid-area: main7;
+      width: 465px;
+
+    }
+
+
+    .main8{
+      grid-area: main8;
+      width: 465px;
+    }
+    
+  
+    }
+
+    
+  @media only screen and (min-width: 1200px){
+    body{
+      display: grid;
+      grid-template-columns: fit-content(300px) fit-content(300px)fit-content(300px) fit-content(300px);
+      grid-template-rows: fit-content(300px) fit-content(300px) fit-content(300px) fit-content(300px) ;
+      grid-gap: 10px;
+      grid-template-areas: 
+            "title4 title4 title4   header5  "
+            "title4  title4 title4 header6"
+            "title4 title4 title4 title"
+            "title4  title4 title4 buttons"
+            "main main main5 main5  "
+            "main2 main2 main6 main6 "
+            "main3 main3 main7 main7 "
+            "main4 main4 main8 main8 "
+  
+    }
+    nav ul li {
+      padding: 0.5em;
+      border: none;
+    }
+  
+    nav ul {
+      flex-flow: row;
+    }
+  
+    .menutoggle {
+      display: none;
+    }
+  
+  #menu {
+    display: none;
+  }
+
+  .header3 {
+    display:none;
+  }
+
+  .header2 {
+    display: none;
+  }
+  
+  .header4 {
+    display: inline;
+  }
+  
+  .header5 {
+    display: inline;
+  }
+  
+  .header6 {
+    display: inline;
+  }
+  
+  .menubuttons {
+    display: block;
+    grid-area: buttons;
+  }
+  
+    .active, .inactive {
+      max-height: unset;
+    }
+  
+    .header{
+      grid-area: title;
+      width: 33%;
+    } 
+    
+    .main{
+      grid-area: main;
+      width: 565px;
+  
+    }
+    
+    .main2{
+      grid-area: main2;
+      width: 565px;
+  
+    }
+    
+    .main3{
+      grid-area: main3;
+      width: 565px;
+    }
+  
+    .main4{
+      grid-area: main4;
+      width: 565px;
+    }
+    
+    .main5{
+      grid-area: main5;
+      width: 565px;
+    }
+    .main6{
+      grid-area: main6;
+      width: 565px;
+    }
+    .main7{
+      grid-area: main7;
+      width: 565px;
+      overflow: auto;
+
+    }
+
+
+    .main8{
+      grid-area: main8;
+      width: 565px;
+    }
+    
+  
+    }
+
+
+
+
+
+
+
+
+
